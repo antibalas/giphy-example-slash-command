@@ -11,6 +11,8 @@ var corsOptions = {
 
 app.get('/typeahead', cors(corsOptions), require('./api/typeahead'));
 app.get('/resolver', cors(corsOptions), require('./api/resolver'));
+app.get('/yelp/typeahead', cors(corsOptions), require('./api/yelp_typeahead'));
+app.get('/yelp/resolver', cors(corsOptions), require('./api/yelp_resolver'));
 
 if (process.env.NODE_ENV === 'production') {
   app.listen(process.env.PORT || 9145);

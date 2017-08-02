@@ -1,24 +1,22 @@
-# Giphy Slash Command for Mixmax
+# Yelp Slash Command for Mixmax
 
-This is an open source Mixmax Slash Command. See <http://developer.mixmax.com/docs/overview-slash-commands#tutorial-building-mygiphy> for more information about how to use this example code in Mixmax.
-
-For a more complex example using multi-word search, see [Soundcloud command](https://github.com/simonxca/mixmax-soundcloud-slash-command).
+This is a Mixmax Slash Command that allows the user to search for local businesses on Yelp - a perfect complement to the event scheduling features already available on MixMax.
 
 ## Running locally
 
 1. Install using `npm install`
-2. Run using `npm start`
+2. Run `npm start`
 
 To simulate locally how Mixmax calls the typeahead URL (to return a JSON list of typeahead results), run:
 
 ```
-curl https://localhost:9145/typeahead?text=cats --insecure
+curl https://localhost:9145/yelp/typeahead?text=coffee --insecure
 ```
 
 To simulate locally how Mixmax calls the resolver URL (to return HTML that goes into the email), run:
 
 ```
-curl https://localhost:9145/resolver?text=cats --insecure
+curl https://localhost:9145/yelp/resolver?text=coffee --insecure
 ```
 
 ## Why do we run it in https locally?
